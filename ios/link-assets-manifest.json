@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/OFL.txt",
+      "sha1": "ecab53ce4e2ee821c743a4c53d10fed43fa014df"
+    },
+    {
+      "path": "src/assets/fonts/RubikBubbles-Regular.ttf",
+      "sha1": "3ed44df9642eb519e942aa9dfb808451c4a39d5b"
+    }
+  ]
+}
