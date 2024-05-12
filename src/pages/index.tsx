@@ -4,4 +4,6 @@ import Register from "./Register";
 import Home from "./Home";
 import Notification from "./Notification";
 import Order from "./Order";
-export {Splash, Login, Register, Home, Notification, Order};
+import HomeDrink from "./HomeDrink";
+import Buy from "./Buy";
+export {HomeDrink,Splash, Login, Register, Home, Notification, Order, Buy};

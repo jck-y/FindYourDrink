@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "810010621968",
+    "project_id": "findyourdrink-310df",
+    "storage_bucket": "findyourdrink-310df.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810010621968:android:0c42abdef34d8bfda2b295",
+        "android_client_info": {
+          "package_name": "com.findyourdrink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCvkmJnieoTwL69ZkiuEdU1akI5p4tB354"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
