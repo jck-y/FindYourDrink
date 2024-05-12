@@ -35,12 +35,16 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     width:size,
     height: 50,
-    borderRadius: 20
+    marginTop: 20,
+    borderRadius: 10, 
   }),
   label: textColor => ({
     textAlign: 'center',
     fontFamily: 'Poppins-Medium',
     fontSize: 14,
     color: textColor,
+    buttonContainer: {
+      alignItems: 'center',
+    },
   }),
 });

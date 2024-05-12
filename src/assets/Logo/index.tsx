@@ -1,2 +1,5 @@
 import Logo from './Logo.png'
-export {Logo}
+import Checkmark from './Checkmark.png'
+import Choices from './Choices.png'
+import Promo from './Promo.png'
+export {Logo, Checkmark, Choices, Promo}
