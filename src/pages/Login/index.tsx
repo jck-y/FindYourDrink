@@ -18,7 +18,7 @@ const Login = ({navigation}) => {
         label="LOG IN"
         backgroundColor="#725D8D"
         textColor="#FFFFFF"
-        onPress={() => navigation.navigate('Home')}
+        onPress={() => navigation.navigate('HomeDrink')}
       />
     </View>
   );

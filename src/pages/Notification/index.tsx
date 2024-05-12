@@ -13,7 +13,7 @@ const Notification = ({navigation}) => {
     <View style={styles.container}>
     <ScrollView contentContainerStyle={styles.scrollViewContainer}>
     
-    <Text>Order</Text>
+    <Text>Notif</Text>
     {/* code disni */}
     </ScrollView>
 
