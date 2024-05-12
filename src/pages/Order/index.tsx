@@ -9,6 +9,7 @@ const Order = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Gap height={50}/>
+      <Text style={styles.categoryText}>ORDER</Text>
       <ScrollView contentContainerStyle={styles.scrollViewContainer}>
         <View style={styles.navigationButtons}>
           <TouchableOpacity
@@ -98,6 +99,15 @@ const styles = StyleSheet.create({
   },
   scrollViewContainer: {
     paddingBottom: 60,
+  },
+  categoryText: {
+    color: '#725d8d',
+    fontSize: 40,
+    fontWeight: '900',
+    marginHorizontal: 16,
+    marginVertical: 16,
+    textAlign:'center',
+    fontFamily:'RubikBubbles-Regular',
   },
   navigationButtons: {
     flexDirection: 'row',

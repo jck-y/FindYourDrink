@@ -1,10 +1,26 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { Button, Gap, TextInput } from '../../components';
-
-const Login = ({ navigation }) => {
-  const handleLogin = () => {
-    navigation.navigate('Home');
+import React, {useState} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
+import {Button, Gap, TextInput} from '../../components';
+import {getAuth, signInWithEmailAndPassword} from 'firebase/auth';
+import {app} from '../../../config/firebase';
+const auth = getAuth(app);
+const Login = ({navigation}) => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const onPressLogin = async () => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password,
+      );
+      const user = userCredential.user;
+      console.log('Logged in user:', user);
+      navigation.replace('Home');
+    } catch (error) {
+      console.log(error);
+      Alert.alert('Login failure', error.message);
+    }
   };
 
   return (
@@ -13,16 +29,29 @@ const Login = ({ navigation }) => {
         <Gap height={50} />
         <Text style={styles.title}>LOGIN</Text>
       </View>
+      <Gap height={134} />
       <View style={styles.contentWrapper}>
-        <TextInput style={styles.input} label="Username" placeholder="Type your username" />
-        <TextInput style={styles.input} label="Password" placeholder="Enter your password" />
+        <TextInput
+          style={styles.input}
+          label="Email"
+          placeholder="Type your email"
+          onChangeText={setEmail}
+          value={email}
+        />
+        <TextInput
+          style={styles.input}
+          label="Password"
+          placeholder="Enter your password"
+          onChangeText={setPassword}
+          value={password}
+        />
         <View style={styles.buttonContainer}>
           <Button
             label="LOGIN"
             backgroundColor="#725D8D"
             textColor="#FFFFFF"
-            onPress={handleLogin}
-            style={styles.button} 
+            onPress={onPressLogin}
+            style={styles.button}
           />
         </View>
       </View>
@@ -50,7 +79,6 @@ const styles = StyleSheet.create({
   },
   contentWrapper: {
     flex: 1,
-    justifyContent: 'center', // Center content vertically
   },
   input: {
     marginBottom: 20,

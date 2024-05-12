@@ -22,7 +22,7 @@ const Home = ({ navigation }) => {
             <Image source={Milkshake} style={styles.drinkImage} />
             <Text style={styles.drinkText}>Milkshake</Text>
           </TouchableOpacity>
-          <TouchableOpacity onPress={() => navigation.navigate('DrinkDetail', { drinkType: 'Coffee' })} style={styles.drinkItem}>
+          <TouchableOpacity onPress={() => navigation.navigate('HomeDrink')} style={styles.drinkItem}>
             <Image source={Coffee} style={styles.drinkImage} />
             <Text style={styles.drinkText}>Coffee</Text>
           </TouchableOpacity>
